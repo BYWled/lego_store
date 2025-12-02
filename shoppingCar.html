@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐购商城 - 购物车</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/top-nav.css">
+    <link rel="stylesheet" href="./css/shoppingCar.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-background">
+            <span class="header-text">legochina.cn</span>
+            <div class="header-top-right">
+                <span class="header-text">欢迎光临</span><span class="header-text high-light a" id="index">乐购</span><span
+                    class="header-text before-login">，请</span>
+                <span class="header-text a before-login" id="login">登陆</span><span class="header-text">\</span><span
+                    class="header-text high-light a before-login" id="register">注册</span>
+                <span class="header-text high-light after-login " id="header-username"></span><span class="header-text after-login">，您好!</span>
+                <span class="header-text high-light a after-login" id="logout">退出登录</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 搜索层 -->
+        <div class="search-area">
+            <input class="search-input" type="text" placeholder="请输入商品名称" id="search" />
+            <img class="search-btn" src="./imgs/index/search.png" alt="搜索" />
+        </div>
+        <!-- 地址层 -->
+        <div class="address-area">
+            <span class="address-title">配送至</span>
+            <select class="address-text" name="address">
+                <option value="成都高新区三环内" selected>成都高新区三环内</option>
+            </select>
+        </div>
+        <!-- 主体部分 -->
+        <div class="shopping-area">
+            <div class="logo">
+                <img src="./imgs/logo.png" class="logo-img">
+                <span class="logo-text">结算中心</span>
+            </div>
+            <span class="shopping-note">填写并核对订单信息</span>
+            <div class="shopping-title-area">
+                <input type="checkbox" class="shopping-select" />
+                <span class="shopping-title">全选</span>
+                <span class="shopping-title">商品</span>
+                <span class="shopping-title">单价</span>
+                <span class="shopping-title">数量</span>
+                <span class="shopping-title">小计</span>
+                <span class="shopping-title">操作</span>
+            </div>
+            <hr class="shopping-line" />
+            <div class="shopping-item">
+                <input type="checkbox" class="shopping-select" />
+                <img class="shopping-img" src="./imgs/shoppingCar/23353342-1_l.jpg" />
+                <span class="shopping-text">从你的全世界路过</span>
+                <span class="shopping-price">41.00</span>
+                <div class="shopping-count-area">
+                    <span class="shopping-count-btn a" id="countPlus">+</span>
+                    <input type="text" class="shopping-count" value=2>
+                    <span class="shopping-count-btn a" id="countMinus">-</span>
+                </div>
+                <span class="shopping-subtotal">0.00</span>
+                <div class="shopping-options">
+                    <span class="shopping-option a" id="deleteItem">删除</span>
+                    <span class="shopping-option a">移到我的关注</span>
+                </div>
+            </div>
+            <div class="shopping-item">
+                <input type="checkbox" class="shopping-select" />
+                <img class="shopping-img" src="./imgs/shoppingCar/23353342-1_l.jpg" />
+                <span class="shopping-text">从你的全世界路过</span>
+                <span class="shopping-price">41.00</span>
+                <div class="shopping-count-area">
+                    <span class="shopping-count-btn a" id="countPlus">+</span>
+                    <input type="text" class="shopping-count" value=1>
+                    <span class="shopping-count-btn a" id="countMinus">-</span>
+                </div>
+                <span class="shopping-subtotal">0.00</span>
+                <div class="shopping-options">
+                    <span class="shopping-option a" id="deleteItem">删除</span>
+                    <span class="shopping-option a">移到我的关注</span>
+                </div>
+            </div>
+            <div class="shopping-footer">
+                <div class="shopping-total-area">
+                    <input type="checkbox" class="shopping-select" />
+                    <span class="total">全选</span>
+                    <span class="total">删除选中商品</span>
+                    <span class="total">已选择</span>
+                    <span class="total-num">0</span>
+                    <span class="total">件商品</span>
+                    <span class="total-price-text">总价</span>
+                    <span class="total-price">0.00</span>
+                </div>
+                <div class="shopping-ckout a">去结算</div>
+            </div>
+        </div>
+        <!-- 猜你喜欢部分 -->
+        <div class="like-title">猜你喜欢</div>
+        <hr class="like-line" />
+        <div class="like-items">
+            <div class="like-item">
+                <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                <img src="./imgs/shoppingCar/note.png" class="like-note">
+                <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                <div class="like-star-area">
+                    <span class="like-star-text">推荐：</span>
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                </div>
+                <div class="like-price-area">
+                    <span class="like-price">¥：38</span>
+                    <span class="like-price-old">¥：58</span>
+                </div>
+            </div>
+            <div class="like-item">
+                <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                <img src="./imgs/shoppingCar/note.png" class="like-note">
+                <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                <div class="like-star-area">
+                    <span class="like-star-text">推荐：</span>
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                </div>
+                <div class="like-price-area">
+                    <span class="like-price">¥：38</span>
+                    <span class="like-price-old">¥：58</span>
+                </div>
+            </div>
+            <div class="like-item">
+                <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                <img src="./imgs/shoppingCar/note.png" class="like-note">
+                <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                <div class="like-star-area">
+                    <span class="like-star-text">推荐：</span>
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                </div>
+                <div class="like-price-area">
+                    <span class="like-price">¥：38</span>
+                    <span class="like-price-old">¥：58</span>
+                </div>
+            </div>
+            <div class="like-item">
+                <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                <img src="./imgs/shoppingCar/note.png" class="like-note">
+                <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                <div class="like-star-area">
+                    <span class="like-star-text">推荐：</span>
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                </div>
+                <div class="like-price-area">
+                    <span class="like-price">¥：38</span>
+                    <span class="like-price-old">¥：58</span>
+                </div>
+            </div>
+            <div class="like-item">
+                <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                <img src="./imgs/shoppingCar/note.png" class="like-note">
+                <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                <div class="like-star-area">
+                    <span class="like-star-text">推荐：</span>
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    <img src="./imgs/shoppingCar/star.png" class="like-star">
+                </div>
+                <div class="like-price-area">
+                    <span class="like-price">¥：38</span>
+                    <span class="like-price-old">¥：58</span>
+                </div>
+            </div>
+        </div>
+        <!-- 广告部分 -->
+        <img src="./imgs/ad.png" class="ad">
+    </main>
+
+    <footer>
+        <div class="footer-hero-background">
+            <div class="footer-hero">
+                <img class="footer-hero-img" src="./imgs/footer/222_11.png" />
+                <img class="footer-hero-img" src="./imgs/footer/222_13.png" />
+                <img class="footer-hero-img" src="./imgs/footer/222_15.png" />
+                <img class="footer-hero-img" src="./imgs/footer/222_17.png" />
+            </div>
+        </div>
+        <!-- <div class="footer-content-background"> -->
+        <div class="footer-content-area">
+            <div class="footer-contents">
+                <span class="footer-content-title">购物指南</span>
+                <span class="footer-content a">购物流程</span>
+                <span class="footer-content a">发票制度</span>
+                <span class="footer-content a">账户管理</span>
+                <span class="footer-content a">会员优惠</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">支付方式</span>
+                <span class="footer-content a">货到付款</span>
+                <span class="footer-content a">网上支付</span>
+                <span class="footer-content a">礼品卡支付</span>
+                <span class="footer-content a">银行转账</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">订单服务</span>
+                <span class="footer-content a">订单配送查询</span>
+                <span class="footer-content a">订单状态说明</span>
+                <span class="footer-content a">自助取消订单</span>
+                <span class="footer-content a">自助修改订单</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">退换货</span>
+                <span class="footer-content a">退换货政策</span>
+                <span class="footer-content a">自助申请退换货</span>
+                <span class="footer-content a">退换货进度查询</span>
+                <span class="footer-content a">退款方式和时间</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">商家服务</span>
+                <span class="footer-content a">商家中心</span>
+                <span class="footer-content a">运营服务</span>
+                <span class="footer-content a">进入尾品汇</span>
+                <span class="footer-content a">坤你太美</span>
+            </div>
+            <img class="footer-icon a" id="index" src="./imgs/footer/logo_00.png" />
+        </div>
+        <div class="footer-about a">公司简介&nbsp;&nbsp;|&nbsp;&nbsp;Investor
+            Relations&nbsp;&nbsp;|&nbsp;&nbsp;网站联盟&nbsp;&nbsp;|&nbsp;&nbsp;乐购招商&nbsp;&nbsp;|&nbsp;&nbsp;机构销售&nbsp;&nbsp;|&nbsp;&nbsp;手机乐购&nbsp;&nbsp;|&nbsp;&nbsp;官方Blog&nbsp;&nbsp;|&nbsp;&nbsp;热词搜索
+        </div>
+        <div class="footer-brand">Copyright © 乐购网 2004-2016 All Rights Reserved</div>
+        <!-- </div> -->
+    </footer>
+    <script src="./js/shoppingCar.js"></script>
+    <script src="./js/header-footer.js"></script>
+</body>
+
+</html>

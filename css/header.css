@@ -1,0 +1,43 @@
+header,
+.header-background {
+    width: 100%;
+    height: 28px;
+    background-color: #101010;
+}
+
+.header-background {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-background>.header-text:first-child {
+    color: #e6e6e6;
+    font-family: 'SimHei';
+    font-size: 18px;
+    margin-left: 206px;
+}
+
+.header-top-right {
+    font-family: 'SimHei';
+    margin-right: 10px;
+}
+
+.header-top-right .header-text {
+    color: #a0a0a0;
+    font-size: 14px;
+}
+
+.header-top-right .high-light {
+    color: #ff6600;
+}
+
+.a:hover {
+    cursor: pointer;
+}
+
+.after-login {
+    display: none;
+}

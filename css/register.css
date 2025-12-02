@@ -1,0 +1,120 @@
+main {
+    width: 400px;
+    height: 603px;
+    margin: 56px auto 38px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 注册表单部分 */
+.input-area {
+    width: 400px;
+    height: 44px;
+    border: solid 1px #d9d9d9;
+    box-sizing: border-box;
+    display: flex;
+    padding: 0 4px 0 11px;
+}
+
+.input-area {
+    position: relative;
+}
+
+.input-title {
+    width: 119px;
+    font-size: 22px;
+    line-height: 44px;
+    color: #666666;
+}
+
+.input {
+    flex: 1;
+    width: 0;
+    font-size: 16px;
+    line-height: 36px;
+    margin: auto 0;
+    border: none;
+    outline: none;
+    overflow-x: hidden;
+    padding-right: 7px;
+}
+
+.input::placeholder {
+    color: #ccc;
+}
+
+.v-img,
+.v-btn {
+    width: 124px;
+	height: 36px;
+    margin: auto 0;
+}
+
+.v-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.v-btn {
+    background-color: #e6e6e6;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+	color: #4d4d4d;
+}
+
+.err {
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+    color: #f4290d;
+    left: 130px;
+    bottom: -18px;
+}
+
+.btn {
+    width: 400px;
+    height: 44px;
+    background-color: #ff6600;
+    font-size: 28px;
+    line-height: 44px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.agree-area {
+    position: absolute;
+    height: 14px;
+    left: 0;
+    bottom: -26px;
+    display: flex;
+    align-items: center;
+}
+
+.agree-checkbox {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    border: solid 1px #e5e5e5;
+}
+
+.agree-text {
+    font-size: 14px;
+    line-height: 14px;
+	color: #4d4d4d;
+}
+
+.agree-text.high-light {
+    color: #ff6600;
+}
+
+.divider {
+    width: 1200px;
+    height: 2px;
+	background-color: #e6e6e6;
+    margin: 0 auto;
+}

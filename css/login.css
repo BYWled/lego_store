@@ -1,0 +1,215 @@
+/* 引用重定义 */
+.title-background {
+    box-shadow: none;
+}
+
+footer {
+    margin-top: 29px;
+}
+
+main {
+    height: 500px;
+    width: 100%;
+    background-image: url("../imgs/login/back.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.GPS {
+    width: 1200px;
+    height: 370px;
+    margin: auto auto;
+}
+
+.main-window {
+    margin-left: 753px;
+    height: 100%;
+    width: 350px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-title-area {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.title-btn {
+    width: 0;
+    flex: 1;
+    height: 100%;
+    line-height: 55px;
+    text-align: center;
+    font-size: 22px;
+    color: #666;
+}
+
+.title-btn.active {
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.title-line {
+    width: 1px;
+    height: 24px;
+    margin: auto 0;
+    background-color: #f6f6f6;
+}
+
+.content {
+    width: 100%;
+    height: 314px;
+    display: none;
+    flex-wrap: wrap;
+}
+
+.content.active {
+    display: flex;
+}
+
+.qr-code-img {
+    width: 147px;
+    height: 147px;
+    object-fit: contain;
+    margin: 65px 25px 0 29px;
+}
+
+.phone-img {
+    width: 141px;
+    height: 168px;
+    margin-top: 55px;
+    object-fit: contain;
+}
+
+.scan-text {
+    height: 14px;
+    margin: 31px auto 46px auto;
+    font-size: 14px;
+    color: #666666;
+}
+
+.input-area {
+    width: calc(100% - 60px);
+    height: 40px;
+    box-sizing: border-box;
+    margin: 5px 30px 12px 30px;
+    border: 1px solid #bfbfbf;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-area:focus {
+    border: 1px solid #ff6600;
+    outline: none;
+}
+
+.input-area:first-child {
+    margin-top: 42px;
+}
+
+.input-logo-area {
+    width: 39px;
+    height: 100%;
+    padding: 11px 0;
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+}
+
+.input-logo {
+    height: 15px;
+    margin: 0 12px;
+}
+
+.input-box {
+    width: calc(100% - 39px);
+    border: none;
+    flex: 1;
+    font-size: 16px;
+    padding: 5px 9px;
+    line-height: 30px;
+    color: #343434;
+}
+
+.input-box::placeholder {
+    color: #e6e6e6;
+}
+
+.input-box:focus {
+    outline: none;
+}
+
+.input-delete {
+    margin: auto 9px auto 0;
+    width:16px;
+    height:16px;
+    display: none;
+}
+
+.text-area {
+    height: 14px;
+    width: calc(100% - 60px);
+    margin: 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox {
+    height: 12px;
+    width: 12px;
+    margin: 0 8px 0 3px;
+    border: #bfbfbf 1px solid;
+    box-sizing: border-box;
+    align-self: flex-end;
+}
+
+.checkbox:checked {
+    background-color: #ff6600;
+    border: none;
+}
+
+.text {
+    font-size: 14px;
+    color: #4d4d4d;
+}
+
+.text:last-child {
+    margin-left: auto;
+}
+
+.login-btn {
+    width: calc(100% - 60px);
+    height: 40px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 23px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    margin: 29px 30px 28px 30px;
+}
+
+.res-btn-area {
+    border-top: 2px solid #e6e6e6;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.res-btn-text {
+    font-size: 19px;
+    color: #ff6600;
+}
