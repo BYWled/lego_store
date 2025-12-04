@@ -104,30 +104,61 @@ function cleaner() {
         // 新节点替换旧节点
         elem.parentNode.replaceChild(newElem, elem);
     });
+    // 重加载时，判断是否有商品
+    let itemElements = document.querySelectorAll('.shopping-item');
+    if (itemElements.length === 0)
+        document.querySelector('.air-item').style.display = 'block';
+    else
+        document.querySelector('.air-item').style.display = 'none';
 }
 
 // 删除单个商品
 function setupDeleteButtons() {
     let deleteBtns = document.querySelectorAll('#deleteItem');
-    deleteBtns.forEach(btn => {
-        btn.addEventListener('click', function () {
+    for (let num = 0; num < deleteBtns.length; num++) {
+        deleteBtns[num].addEventListener('click', function () {
             // 删除当前商品行
             this.parentNode.parentNode.remove();
+            // 删除该按钮对应的商品的localStorage数据
+            // 反转计数
+            let cacheIndex = deleteBtns.length - num - 1;
+            // 获取缓存数据
+            let cacheItems = localStorage.getItem('lego-shoppingItems') || '[]';
+            if (cacheItems) {
+                let items = JSON.parse(cacheItems);
+                // 删除对应数据
+                items.splice(cacheIndex, 1);
+                localStorage.setItem('lego-shoppingItems', JSON.stringify(items));
+            }
             // 重新初始化所有更新
             init();
         });
-    });
+    }
 }
 
 // 增加商品（直接将猜你喜欢作为新增商品的来源）
 document.querySelectorAll('.like-item').forEach(item => {
     item.addEventListener('click', function () {
-        addItem(
-            this.querySelector('.like-img').src,
-            this.querySelector('.like-text').innerText,
+        let newItem = {
+            img_src: this.querySelector('.like-img').src,
+            name: this.querySelector('.like-text').innerText,
             // 数据格式化：去除前缀、转为浮点数、保留两位小数
-            parseFloat(this.querySelector('.like-price').innerText.replace('¥：', '')).toFixed(2),
-        );
+            price: parseFloat(this.querySelector('.like-price').innerText.replace('¥：', '')).toFixed(2),
+            count: 1
+        };
+        addItem(newItem.img_src, newItem.name, newItem.price);
+        // 同步更新localStorage
+        let items = localStorage.getItem('lego-shoppingItems') || '[]';
+        if (items) {
+            items = JSON.parse(items);
+            items.push(newItem);
+            localStorage.setItem('lego-shoppingItems', JSON.stringify(items));
+        } else {
+            localStorage.setItem('lego-shoppingItems', JSON.stringify([newItem]));
+        }
+        // 重新初始化所有更新
+
+        init();
     });
 });
 
@@ -150,8 +181,17 @@ function addItem(img_src, name, price, count) {
                     <span class="shopping-option a">移到我的关注</span>
                 </div>
             </div>`);
-    // 重新初始化所有更新
-    init();
+}
+
+// 从localStorage加载商品
+function loadLocalStorageItems() {
+    let cacheItems = localStorage.getItem('lego-shoppingItems') || '[]';
+    if (cacheItems && cacheItems !== '[]') {
+        let items = JSON.parse(cacheItems);
+        items.forEach(item => {
+            addItem(item.img_src, item.name, parseFloat(item.price).toFixed(2), item.count);
+        });
+    }
 }
 
 // 初始化
@@ -170,4 +210,6 @@ function init() {
     updateTotal();
 }
 
+// 首次加载localStorage数据
+loadLocalStorageItems();
 init();

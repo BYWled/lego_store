@@ -138,6 +138,14 @@ header,
     margin: 19px 0 21px 0;
 }
 
+.air-item {
+    font-size: 24px;
+    color: #999999;
+    text-align: center;
+    margin: 100px 0;
+    display: none;
+}
+
 .shopping-item {
     display: flex;
     height: 185px;
@@ -164,7 +172,8 @@ header,
 }
 
 .shopping-text {
-    margin: 22px 256px 0 0;
+    margin-top: 22px;
+    width: 384px;
 }
 
 .shopping-price {
@@ -174,7 +183,7 @@ header,
 
 .shopping-count-area {
     display: flex;
-    width: 126px;
+    min-width: 126px;
     height: 26px;
     margin: 16px 61px 0 75px;
     box-sizing: border-box;
@@ -205,10 +214,13 @@ header,
 }
 
 .shopping-subtotal {
+    max-width: 130px;
     font-size: 18px;
     line-height: 14px;
     font-weight: bold;
     margin-top: 22px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 
 .shopping-options {
@@ -253,7 +265,8 @@ header,
 }
 
 .shopping-total-area .total:nth-child(3) {
-    margin: 0 516px 0 33px;
+    margin-left:33px;
+    flex: 1;
 }
 
 .total-num {
@@ -261,7 +274,9 @@ header,
     font-size: 22px;
     font-weight: bold;
     height: 16px;
-    margin: 0 15px 0 15px;
+    min-width: 10px;
+    margin: 0 15px;
+    text-align: center;
 }
 
 .total-price-text {
@@ -276,8 +291,9 @@ header,
     line-height: 15px;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 9px;
+    margin: 0 9px;
     color: #ff6600;
+    min-width: 92px;
 }
 
 .shopping-ckout {
