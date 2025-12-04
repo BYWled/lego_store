@@ -304,6 +304,14 @@ function btnsControl() {
                 nowPages[3].innerText = changeNum + 4;
                 nowPages[4].innerText = changeNum + 5;
                 nowPages[5].innerText = changeNum + 6;
+                // 这个奇怪的第2页，所有bug都是你造成的
+                if (changeNum - 2 < 1) {
+                    nowPages[0].innerText = 1;
+                    nowPages[1].innerText = 2;
+                    nowPages[2].innerText = 3;
+                    clearActive();
+                    nowPages[1].classList.add('active');
+                }
             } else {
                 // 如果已经在左侧，则递增右侧页码
                 for (let i = 3; i < 6; i++) {
@@ -330,6 +338,7 @@ function btnsControl() {
     prePages.addEventListener('click', function () {
         let activeBtn = document.querySelector('.page-btn.active');
         let isCenter = centerPages.classList.contains('active');
+        let isFu = false;
         if (isCenter) {
             // 如果当前激活的是左侧先切换到右侧
             if (getActiveIndex() <= 2) {
@@ -343,9 +352,11 @@ function btnsControl() {
                 nowPages[2].innerText = changeNum - 4;
                 nowPages[4].innerText = changeNum + 1;
                 nowPages[5].innerText = changeNum + 2;
+                if (changeNum - 6 < 1) {
+                    isFu = true;
+                }
             } else {
                 // 如果已经在右侧，则递减左侧页码
-                let isFu = false;
                 for (let i = 0; i < 3; i++) {
                     let num = parseInt(nowPages[i].innerText) - 3;
                     // 负数判断
@@ -355,11 +366,11 @@ function btnsControl() {
                     }
                     nowPages[i].innerText = num;
                 }
-                // 如果小于1,重置为1,2,3
-                if (isFu) {
-                    for (let i = 0; i < 3; i++) {
-                        nowPages[i].innerText = i + 1;
-                    }
+            }
+            // 如果小于1,重置为1,2,3
+            if (isFu) {
+                for (let i = 0; i < 3; i++) {
+                    nowPages[i].innerText = i + 1;
                 }
             }
         } else {
@@ -381,6 +392,14 @@ function btnsControl() {
                 for (let i = 0; i < 3; i++) {
                     nowPages[i].innerText = i + 1;
                 }
+            }
+            // 右侧负数判断（专防第二页点左侧省略号）
+            if (endNum == 2) {
+                nowPages[3].innerText = 1;
+                nowPages[4].innerText = 2;
+                nowPages[5].innerText = 3;
+                clearActive();
+                nowPages[4].classList.add('active');
             }
         }
         updateStatus();
@@ -405,7 +424,32 @@ function btnsControl() {
             }
             clearActive();
             nowPages[nowPages.length - 1].classList.add('active');
+            // 负数判断
+            if (parseInt(nowPages[0].innerText) <= 0) {
+                for (let i = 0; i < 3; i++) {
+                    nowPages[i].innerText = i + 1;
+                }
+            }
         }
+        // 如果按钮有重复值，则一定是前六个的情况，重置为1-6
+        activeNum = parseInt(document.querySelector('.page-btn.active').innerText) - 1;
+        let nums = [];
+        nowPages.forEach(btn => {
+            nums.push(parseInt(btn.innerText));
+        })
+        let newNums = [];
+        nums.map(item => {
+            if (newNums.indexOf(item) === -1) {
+                newNums.push(item);
+            }
+        });
+        if (newNums.length < nums.length) {
+            for (let i = 0; i < nowPages.length; i++) {
+                nowPages[i].innerText = i + 1;
+            }
+        }
+        clearActive();
+        nowPages[activeNum].classList.add('active');
         updateStatus();
     });
 
