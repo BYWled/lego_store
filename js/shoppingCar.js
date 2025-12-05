@@ -194,15 +194,44 @@ function loadLocalStorageItems() {
     }
 }
 
+// 删除选中商品
+function deleteSelectedItems() {
+    // 获取所有商品
+    let items = document.querySelectorAll('.shopping-item');
+    // 筛选出受影响的商品
+    let changeIndexes = [];
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].querySelector('.shopping-select:checked')) {
+            changeIndexes.push(i);
+            // 从DOM中删除
+            items[i].remove();
+        }
+    }
+    // 从localStorage（反转顺序）
+    let cacheItems = localStorage.getItem('lego-shoppingItems') || '[]';
+    if (cacheItems) {
+        let items = JSON.parse(cacheItems);
+        // 删除该按钮对应的商品的localStorage数据
+        for (let i = 0; i < changeIndexes.length; i++) {
+            // 反转计数,删除对应数据
+            items.splice(items.length - changeIndexes[i] - 1, 1);
+        }
+        localStorage.setItem('lego-shoppingItems', JSON.stringify(items));
+    }
+    // 重新初始化所有更新
+    init();
+}
+
 // 初始化
 function init() {
     cleaner();
     // 装载小计
-    // 不封装为函数，不调用函数直接使用可以减少DOM访问次数
+    // 不封装为函数，不调用函数直接使用可以减少DOM访问次数（初始化小计）
     let subtotalElements = document.querySelectorAll('.shopping-subtotal');
     subtotalElements.forEach(elem => {
         elem.innerText = (parseFloat(elem.parentNode.querySelector('.shopping-price').innerText) * parseInt(elem.parentNode.querySelector('.shopping-count').value)).toFixed(2);
     });
+    document.querySelector('#deleteSelect').addEventListener('click', deleteSelectedItems);
     updateSubtotal();
     updateSelection();
     updateSelectAll();
