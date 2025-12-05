@@ -31,7 +31,7 @@ LeGou-Store/
 └── shoppingCar.html    # 购物车页
 ```
 
-## 4\. 核心功能模块 (答辩重点)
+## 4\. 核心功能模块
 
 ### 4.1 全局公共模块 (`js/header-footer.js`)
 
