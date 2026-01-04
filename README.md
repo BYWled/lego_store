@@ -1,5 +1,7 @@
 # 乐购商城 (LeGou Store) - 原生前端电商平台实战
 
+[![GitHub stars](https://img.shields.io/github/stars/BYWled/lego_store?style=flat-square&logo=github)](https://github.com/BYWled/lego_store) [![Gitee](https://img.shields.io/badge/Gitee-Project-c71d23?style=flat-square&logo=gitee&logoColor=white)](https://gitee.com/BYWled/legou_store)
+
 ## 1\. 项目简介
 
 本项目是一个基于 **HTML5、CSS3 和 原生 JavaScript** 开发的 B2C 电商平台前端项目。项目模拟了从用户注册登录、商品浏览、详情展示到购物车结算的完整电商闭环。
