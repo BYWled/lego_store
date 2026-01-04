@@ -105,15 +105,41 @@ function changeType() {
 
 // 点击修改评价（TODO:实验）
 let numDom = document.querySelector('.evaluation-hero-num')
-let lineDom  = document.querySelector('.evaluation-hero-bar')
-lineDom.addEventListener('click',function(event){
+let lineDom = document.querySelector('.evaluation-hero-bar')
+lineDom.addEventListener('click', function (event) {
     //1.获取当前点击的位置（相对于自身盒子的 x轴的位置）
     let offsetX = event.offsetX;
     // 修改实心星星（评分条）的宽度为这个点击位置
-    lineDom.childNodes[1].style.width = offsetX+'px';
+    lineDom.childNodes[1].style.width = offsetX + 'px';
     //计算出最终得分
-    numDom.innerText = (offsetX/150*100).toFixed(0) + '%';
+    numDom.innerText = (offsetX / 150 * 100).toFixed(0) + '%';
 })
+
+// 购物车跳转
+document.querySelector('.shopping-car-area').addEventListener('click', function () {
+    location.href = './shoppingCar.html';
+});
+
+// 通过localStorage添加商品到购物车
+document.querySelector('#add-cart').addEventListener('click', function () {
+    // 获取商品信息
+    let item = {
+        img_src: document.querySelector('.info-img').src,
+        name: document.querySelector('.info-title').innerText,
+        price: parseFloat((document.querySelector('.info-price').innerText).slice(1)),
+        count: parseInt(document.querySelector('.info-count').value)
+    }
+    let items = localStorage.getItem('lego-shoppingItems') || '[]';
+    if (items) {
+        items = JSON.parse(items);
+        items.push(item);
+        localStorage.setItem('lego-shoppingItems', JSON.stringify(items));
+    } else {
+        localStorage.setItem('lego-shoppingItems', JSON.stringify([item]));
+    }
+    // 跳转到购物车页面
+    location.href = './shoppingCar.html';
+});
 
 // 初始化调用
 updateTotal();
