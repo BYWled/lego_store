@@ -110,6 +110,7 @@ header,
     font-size: 18px;
     line-height: 18px;
     color: #808080;
+    white-space: nowrap;
 }
 
 .shopping-title:nth-child(2) {
