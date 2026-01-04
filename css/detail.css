@@ -503,6 +503,7 @@ header,
     background-color: #ff6600;
     color: #fefefe;
     padding: 13px 10px;
+    margin: 0 22px 0 5px;
 }
 
 .after-right-line {
@@ -699,6 +700,19 @@ header,
     font-size: 18px;
     color: #999999;
     margin: 0 5px 0 7px;
+    display: none;
+}
+
+.next-page.active {
+    display: inline-block;
+}
+
+.next-pages, .pre-pages, .center-pages {
+    display: none;
+}
+
+.next-pages.active, .pre-pages.active, .center-pages.active {
+    display: inline-block;
 }
 
 .ad {
