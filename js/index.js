@@ -392,8 +392,10 @@ let index_listener = function () {
     })
 
     // TODO:模拟跳转其它页：
-    document.querySelector('.daily-item').addEventListener('click', function () {
-        location.href = './detail.html';
+    document.querySelectorAll('.daily-item').forEach(item => {
+        item.addEventListener('click', function () {
+            location.href = './detail.html';
+        });
     });
     document.querySelector('.shopping-car-area').addEventListener('click', function () {
         location.href = './shoppingCar.html';
