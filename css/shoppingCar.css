@@ -1,0 +1,381 @@
+body {
+    overflow-y: scroll;
+    font-family: 'SimHei';
+}
+
+main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部重定义样式 */
+header,
+.header-background {
+    height: 21px;
+}
+
+.header-background>.header-text:first-child {
+    margin-left: 265px;
+}
+
+/* 搜索重定义样式 */
+.search-area {
+    margin: 8px auto 14px auto;
+}
+
+.search-btn {
+    margin-right: 5px;
+}
+
+/* 地址部分 */
+.address-area {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.address-area,
+.address-text {
+    font-size: 14px;
+    line-height: 13px;
+    color: #4d4d4d;
+    font-family: 'SimHei';
+}
+
+.address-text {
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    height: 22px;
+    box-sizing: border-box;
+    margin: 0 19px 0 9px;
+    padding: 0 31px 0 7px;
+}
+
+/* logo拼装 */
+.logo {
+    width: 258px;
+    height: 105px;
+    background-color: #ff6600;
+    top: -105px;
+    display: flex;
+}
+
+.logo-img {
+    width: 92px;
+    height: 64px;
+    margin: auto 0 auto 23px;
+}
+
+.logo-text {
+    font-size: 30px;
+    line-height: 29px;
+    color: #fff;
+    font-weight: bold;
+    margin: 40px 0 36px 13px;
+}
+
+/* 购物车主体 */
+.shopping-area {
+    /* logo所需相对定位 */
+    position: relative;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-note {
+    font-size: 20px;
+    line-height: 19px;
+    color: #666;
+    margin: 24px 0 5px 3px;
+}
+
+.shopping-title-area {
+    display: flex;
+    align-items: center;
+    padding: 21px 23px;
+    background-color: #f2f2f2;
+}
+
+.shopping-select {
+    width: 18px;
+    height: 18px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.shopping-title {
+    font-size: 18px;
+    line-height: 18px;
+    color: #808080;
+}
+
+.shopping-title:nth-child(2) {
+    font-size: 18px;
+    line-height: 16px;
+    margin: 0 180px 0 5px;
+}
+
+.shopping-title:nth-child(4) {
+    margin: 0 126px 0 345px;
+}
+
+.shopping-title:nth-child(6) {
+    margin: 0 87px 0 111px;
+}
+
+.shopping-title:last-child {
+    margin-right: 66px;
+}
+
+.shopping-line {
+    width: 100%;
+    height: 6px;
+    background-color: #dfdfdf;
+    border: none;
+    margin: 19px 0 21px 0;
+}
+
+.shopping-item {
+    display: flex;
+    height: 185px;
+    margin-bottom: 26px;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 15px;
+    color: #4d4d4d;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.shopping-item .shopping-select {
+    margin-left: 23px;
+}
+
+.shopping-img {
+    width: 160px;
+    height: 160px;
+    padding: 5px 4px 5px 6px;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    margin: 0 29px 0 29px;
+}
+
+.shopping-text {
+    margin: 22px 256px 0 0;
+}
+
+.shopping-price {
+    line-height: 11px;
+    margin-top: 24px;
+}
+
+.shopping-count-area {
+    display: flex;
+    width: 126px;
+    height: 26px;
+    margin: 16px 61px 0 75px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    line-height: 26px;
+    font-size: 16px;
+}
+
+.shopping-count-btn {
+    padding: 0 9px;
+    height: 26px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.shopping-count {
+    width: 0;
+    flex: 1;
+    border: none;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 11px;
+    font-family: 'SimHei';
+    color: #4d4d4d;
+    text-align: center;
+}
+
+.shopping-subtotal {
+    font-size: 18px;
+    line-height: 14px;
+    font-weight: bold;
+    margin-top: 22px;
+}
+
+.shopping-options {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-end;
+    margin: 22px 24px 0 0;
+}
+
+.shopping-option {
+    margin-bottom: 14px;
+}
+
+.shopping-option:first-child {
+    margin-right: 63px;
+}
+
+.shopping-footer {
+    height: 60px;
+    margin: 6px 0 37px 0;
+    display: flex;
+}
+
+.shopping-total-area {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    line-height: 15px;
+    font-size: 16px;
+    color: #808080;
+    flex: 1;
+}
+
+.shopping-total-area .shopping-select {
+    margin: 0 11px 0 23px;
+}
+
+.shopping-total-area .total:nth-child(2) {
+    line-height: 15px;
+}
+
+.shopping-total-area .total:nth-child(3) {
+    margin: 0 516px 0 33px;
+}
+
+.total-num {
+    color: #ff6600;
+    font-size: 22px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0 15px 0 15px;
+}
+
+.total-price-text {
+    line-height: 19px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4d4d4d;
+    margin-left: 50px;
+}
+
+.total-price {
+    line-height: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 9px;
+    color: #ff6600;
+}
+
+.shopping-ckout {
+    width: 128px;
+    height: 60px;
+    background-color: #ff6600;
+    line-height: 60px;
+    font-size: 26px;
+    color: #fefefe;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* 猜你喜欢部分 */
+.like-title {
+    width: 124px;
+    height: 47px;
+    background-color: #ff6600;
+    font-size: 24px;
+    text-align: center;
+    line-height: 47px;
+    color: #ffffff;
+}
+
+.like-line {
+    height: 6px;
+    border: none;
+    background-color: #ff6600;
+}
+
+.like-items {
+    height: 256px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.like-item {
+    height: 100%;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+}
+
+.like-item:hover {
+    background-color: #f2f2f2;
+}
+
+.like-img {
+    margin: 7px auto 0 auto;
+    height: 150px;
+    width: 150px;
+}
+
+.like-note {
+    width: 73px;
+    height: 25px;
+}
+
+.like-text {
+    margin: 5px 10px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 13px;
+}
+
+.like-star-area,
+.like-price-area {
+    display: flex;
+}
+
+.like-star-text {
+    line-height: 13px;
+    font-size: 14px;
+    color: #f4290d;
+    margin: 0 6px 0 9px;
+    align-self: end;
+}
+
+.like-star {
+    height: 18px;
+    margin-right: 1px;
+}
+
+.like-price,
+.like-price-old {
+    margin: 9px 22px 0 11px;
+    line-height: 18px;
+	font-size: 24px;
+	color: #f4290d;
+}
+
+.like-price-old {
+    text-decoration: line-through;
+    color: #c0c0c0;
+}
+
+.ad {
+    height: 90px;
+    margin-top: 90px;
+}

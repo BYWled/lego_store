@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>乐购商城</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/top-nav.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-background">
+            <span class="header-text">legochina.cn</span>
+            <div class="header-top-right">
+                <span class="header-text">欢迎光临</span><span class="header-text high-light a" id="index">乐购</span><span
+                    class="header-text before-login">，请</span>
+                <span class="header-text a before-login" id="login">登陆</span><span class="header-text">\</span><span
+                    class="header-text high-light a before-login" id="register">注册</span>
+                <span class="header-text high-light after-login " id="header-username"></span><span class="header-text after-login">，您好!</span>
+                <span class="header-text high-light a after-login" id="logout">退出登录</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 顶部搜索区域 -->
+    <div class="top-search-area">
+        <img class="top-logo" src="./imgs/logo.png" alt="乐购商城" />
+        <div class="top-search">
+            <input type="text" placeholder="请输入搜索的商品" id="top-search" />
+            <img class="top-search-btn a" src="./imgs/index/search.png" alt="搜索" />
+        </div>
+    </div>
+
+    <!-- 右边栏 -->
+    <img src="./imgs/index/two_30.jpg" class="ticket-logo a">
+    <img src="./imgs/index/two_34.jpg" class="QRCode">
+    <img src="./imgs/index/two_35.jpg" class="ticket-center a">
+    <img src="./imgs/index/two_40.jpg" class="ticket-car a">
+    <div class="ticket-car-note">26</div>
+
+    <main>
+        <!-- 搜索层 -->
+        <div class="search-area">
+            <input class="search-input" type="text" placeholder="请输入商品名称" id="search" />
+            <img class="search-btn" src="./imgs/index/search.png" alt="搜索" />
+            <div class="shopping-car-area a">
+                <img class="shopping-car-img" src="./imgs/index/bgicon.png" alt="购物车" />
+                <span class="shopping-car">购物车&nbsp;3</span>
+            </div>
+            <div class="order">我的订单</div>
+        </div>
+        <!-- 导航栏 -->
+        <div class="nav-area">
+            <img class="logo" src="./imgs/index/logo.jpg">
+        </div>
+        <!-- 焦点区域 -->
+        <div class="hero-area">
+            <div class="hero-left">
+                <!-- <div class="hero-left-item">项目</div> -->
+            </div>
+            <div class="hero-right">
+                <!-- <div class="hero-left-info">
+                    <div class="hero-info-header-area">
+                        <span class="hero-info-header a">头链接</span>
+                    </div>
+                    <p class="hero-info-title">分类标题</p>
+                    <hr class="hero-info-line" />
+                    <div class="hero-info-text">细分类</div>
+                </div> -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide">
+                            <img src="路径" alt="">
+                        </div> -->
+                    </div>
+                    <!-- 分页器 -->
+                    <div class="swiper-pagination"></div>
+                    <!-- 导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- <img class="hero-img" src="./imgs/index/banner1.jpg" alt="横幅广告" /> -->
+                <!-- <div class="hero-right-btns">
+                    <button class="hero-right-btn">1</button>
+                    <button class="hero-right-btn">2</button>
+                    <button class="hero-right-btn">3</button>
+                    <button class="hero-right-btn">4</button>
+                    <button class="hero-right-btn">5</button>
+                    <button class="hero-right-btn">6</button>
+                </div> -->
+            </div>
+        </div>
+        <!-- 每日部分 -->
+        <div class="daily-area">
+            <div class="title-area">
+                <div class="title-higher">&nbsp;乐购·今日推荐</div>
+            </div>
+            <hr class="title-line" />
+            <div class="daily-items">
+                <!-- <div class="daily-item">
+                    <img src="图片路径" class="promotion-item-img">
+                    <img src="./imgs/index/limitTime.jpg" class="promotion-note">
+                    <span class="daily-description">名字</span>
+                    <span class="daily-description-higher">高亮描述</span>
+                    <span class="daily-price">¥:价格</p>
+                </div> -->
+            </div>
+        </div>
+        <!-- 图书部分 -->
+        <div class="books-area" id="books">
+            <div class="books-title-area">
+                <div class="general-nav-title">图书&nbsp;电子书</div>
+                <div class="general-nav-area">
+                    <!-- <span class="general-nav-item a">标签名</span> -->
+                </div>
+            </div>
+            <div class="books-contents">
+                <div class="books-left-area">
+                    <hr class="books-title-line" />
+                    <div class="books-left-info">
+                        <div class="leftest-area">
+                            <!-- <img src="链接" class="leftest-img">
+                            <div class="leftest-info-area">
+                                <div class="leftest-info">
+                                    <span>分类</span>
+                                    <span class="a">全部分类></span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="books-items">
+                            <!-- <img src="大图路径">
+                            <div class="books-item">
+                                <img src="路径" class="book-img">
+                                <div class="book-price-area">
+                                    <span class="book-price">¥价格</span>
+                                    <span class="book-price-old">¥原价</span>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="books-right-area">
+                    <div class="books-top">
+                        <div class="books-top-title">新书畅销榜</div>
+                        <div class="books-top-list">
+                            <!-- <div class="books-top-item a">
+                                <div class="books-top-num">1，最多7</div>
+                                <div class="books-top-content">
+                                    <div class="books-top-name">书名</div>
+                                    <div class="books-top-info">
+                                        <img src="路径" alt="">
+                                        <div class="books-top-text">
+                                            书名<br />
+                                            描述    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 服装部分 -->
+        <div class="clothes-area" id="clothes">
+            <div class="title-area">
+                <div class="general-nav-title">服装</div>
+                <div class="general-nav-area">
+                    <!-- <span class="general-nav-item a">标签名</span> -->
+                </div>
+            </div>
+            <hr class="other-title-line" />
+            <div class="three-parts-info">
+                <div class="leftest-area">
+                <!-- <img src="链接" class="leftest-img">
+                    <div class="leftest-info-area">
+                        <div class="leftest-info">
+                            <span>分类</span>
+                            <span class="a">全部分类></span>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="other-right-area">
+                    <!-- <img src="高图片路径" alt="" class="other-high-img">
+                    <img src="正常图片路径" alt="" class="other-img"> -->
+                </div>
+            </div>
+            <div class="three-parts-logos">
+                <!-- <img src="路径" alt="" > -->
+            </div>
+        </div>
+        <!-- 运动部分 -->
+        <div class="sports-area" id="sports">
+            <div class="title-area">
+                <div class="general-nav-title">户外运动</div>
+                <div class="general-nav-area">
+                    <!-- <span class="general-nav-item a">标签名</span> -->
+                </div>
+            </div>
+            <hr class="other-title-line" />
+            <div class="three-parts-info">
+                <div class="leftest-area">
+                    <!-- <img src="链接" class="leftest-img">
+                    <div class="leftest-info-area">
+                        <div class="leftest-info">
+                            <span>分类</span>
+                            <span class="a">全部分类></span>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="other-right-area">
+                    <!-- <img src="路径" alt="" class="other-high-img">
+                    <img src="路径" alt="" class="other-img"> -->
+                </div>
+            </div>
+            <div class="three-parts-logos">
+                <!-- <img src="路径" alt="" > -->
+            </div>
+        </div>
+        <!-- 童装部分 -->
+        <div class="kids-area" id="kids">
+            <div class="title-area">
+                <div class="general-nav-title">童装 童鞋 婴儿装</div>
+                <div class="general-nav-area">
+                    <!-- <span class="general-nav-item a">标签名</span> -->
+                </div>
+            </div>
+            <hr class="other-title-line" />
+            <div class="three-parts-info">
+                <div class="leftest-area">
+                    <!-- <img src="链接" class="leftest-img">
+                    <div class="leftest-info-area">
+                        <div class="leftest-info">
+                            <span>分类</span>
+                            <span class="a">全部分类></span>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="other-right-area">
+                    <!-- <img src="路径" alt="" class="other-high-img">
+                    <img src="路径" alt="" class="other-img"> -->
+                </div>
+            </div>
+            <div class="three-parts-logos">
+                <!-- <img src="路径" alt="" > -->
+            </div>
+        </div>
+        <!-- 家居部分 -->
+        <div class="furniture-area" id="furniture">
+            <div class="title-area">
+                <div class="title">家居日用</div>
+            </div>
+            <hr class="title-line" />
+            <div class="furniture-contents">
+                <!-- <img src="大图路径" alt="" class="furniture-big-img"> -->
+                <div class="furniture-right-area">
+                    <!-- <img src="路径" alt="" class="other-high-img">
+                    <img src="路径" alt="" class="other-img"> -->
+                </div>
+            </div>
+        </div>
+        <!-- 推广部分 -->
+        <div class="promotion-area">
+            <div class="title-area">
+                <div class="title-higher">推广商品</div>
+                <span class="title-btn-area">
+                    <button class="default-btn"></button><button></button>
+                </span>
+            </div>
+            <hr class="title-line" />
+            <div class="promotion-list">
+                <!-- <div class="promotion-item">
+                    <img class="promotion-item-img" src="路径"/>
+                    <p class="promotion-description">名称</p>
+                    <span class="price">¥:价格</span>
+                    <div class="evaluation-area">
+                        <img class="evaluation-img" src="./imgs/index/index27_14.jpg" alt="" />
+                        <span class="evaluation">已有</span>
+                        <span class="evaluation-higher">评价数</span>
+                        <span class="evaluation">人评价</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- 侧边栏部分 -->
+        <div class="sidebar-area">
+            <div class="sidebar-item" data-id="books">
+                <div class="sidebar-icon"></div>
+                <div class="sidebar-text">图书</div>
+            </div>
+            <div class="sidebar-item" data-id="clothes">
+                <div class="sidebar-icon"></div>
+                <div class="sidebar-text">服装</div>
+            </div>
+            <div class="sidebar-item" data-id="sports">
+                <div class="sidebar-icon"></div>
+                <div class="sidebar-text">运动</div>
+            </div>
+            <div class="sidebar-item" data-id="kids">
+                <div class="sidebar-icon"></div>
+                <div class="sidebar-text">童装</div>
+            </div>
+            <div class="sidebar-item" data-id="furniture">
+                <div class="sidebar-icon"></div>
+                <div class="sidebar-text">家居</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <img src="./imgs/index/gototop_05.jpg" class="goto-top a">
+        <div class="footer-hero-background">
+            <div class="footer-hero">
+                <img class="footer-hero-img" src="./imgs/footer/222_11.png" />
+                <img class="footer-hero-img" src="./imgs/footer/222_13.png" />
+                <img class="footer-hero-img" src="./imgs/footer/222_15.png" />
+                <img class="footer-hero-img" src="./imgs/footer/222_17.png" />
+            </div>
+        </div>
+        <!-- <div class="footer-content-background"> -->
+        <div class="footer-content-area">
+            <div class="footer-contents">
+                <span class="footer-content-title">购物指南</span>
+                <span class="footer-content a">购物流程</span>
+                <span class="footer-content a">发票制度</span>
+                <span class="footer-content a">账户管理</span>
+                <span class="footer-content a">会员优惠</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">支付方式</span>
+                <span class="footer-content a">货到付款</span>
+                <span class="footer-content a">网上支付</span>
+                <span class="footer-content a">礼品卡支付</span>
+                <span class="footer-content a">银行转账</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">订单服务</span>
+                <span class="footer-content a">订单配送查询</span>
+                <span class="footer-content a">订单状态说明</span>
+                <span class="footer-content a">自助取消订单</span>
+                <span class="footer-content a">自助修改订单</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">退换货</span>
+                <span class="footer-content a">退换货政策</span>
+                <span class="footer-content a">自助申请退换货</span>
+                <span class="footer-content a">退换货进度查询</span>
+                <span class="footer-content a">退款方式和时间</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">商家服务</span>
+                <span class="footer-content a">商家中心</span>
+                <span class="footer-content a">运营服务</span>
+                <span class="footer-content a">进入尾品汇</span>
+                <span class="footer-content a">坤你太美</span>
+            </div>
+            <img class="footer-icon a" id="index" src="./imgs/footer/logo_00.png" />
+        </div>
+        <div class="footer-about a">公司简介&nbsp;&nbsp;|&nbsp;&nbsp;Investor
+            Relations&nbsp;&nbsp;|&nbsp;&nbsp;网站联盟&nbsp;&nbsp;|&nbsp;&nbsp;乐购招商&nbsp;&nbsp;|&nbsp;&nbsp;机构销售&nbsp;&nbsp;|&nbsp;&nbsp;手机乐购&nbsp;&nbsp;|&nbsp;&nbsp;官方Blog&nbsp;&nbsp;|&nbsp;&nbsp;热词搜索
+        </div>
+        <div class="footer-brand">Copyright © 乐购网 2004-2016 All Rights Reserved</div>
+        <!-- </div> -->
+    </footer>
+    <script src="./lib/swiper/swiper-bundle.min.js"></script>
+    <script type="application/json" src="./data/index.json"></script>
+    <script type="application/json" src="./data/nav.json"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/header-footer.js"></script>
+</body>
+
+</html>

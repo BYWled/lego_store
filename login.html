@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐购商城 - 登录</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/register-login.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-background">
+            <span class="header-text">legochina.cn</span>
+            <div class="header-top-right">
+                <span class="header-text">欢迎光临</span><span class="header-text high-light a" id="index">乐购</span><span
+                    class="header-text before-login">，请</span>
+                <span class="header-text a before-login" id="login">登陆</span><span class="header-text">\</span><span
+                    class="header-text high-light a before-login" id="register">注册</span>
+                <span class="header-text high-light after-login " id="header-username"></span><span class="header-text after-login">，您好!</span>
+                <span class="header-text high-light a after-login" id="logout">退出登录</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 标题背景 -->
+    <div class="title-background">
+        <div class="title-area">
+            <div class="logo">
+                <img src="./imgs/logo.png" class="logo-img">
+                <span class="logo-text">登录</span>
+            </div>
+            <div class="title">欢迎登录</div>
+        </div>
+    </div>
+
+    <!-- 登录表单部分 -->
+    <main>
+        <div class="GPS">
+            <div class="main-window">
+                <div class="main-title-area">
+                    <div class="title-btn a">扫码登录</div>
+                    <div class="title-line"></div>
+                    <div class="title-btn a">账户登录</div>
+                </div>
+                <div class="content">
+                    <img src="./imgs/login/qrcode.png" class="qr-code-img">
+                    <img src="./imgs/login/phone.png" class="phone-img">
+                    <span class="scan-text">打开手机版&nbsp;乐购APP&nbsp;&nbsp;扫一扫</span>
+                </div>
+                <div class="content">
+                    <div class="input-area">
+                        <div class="input-logo-area">
+                            <img src="./imgs/login/yonghu.png" class="input-logo">
+                        </div>
+                        <input type="text" class="input-box" placeholder="用户名/手机号/邮箱">
+                        <img src="./imgs/login/close-l.png" class="input-delete a">
+                    </div>
+                    <div class="input-area">
+                        <div class="input-logo-area">
+                            <img src="./imgs/login/mima.png" class="input-logo">
+                        </div>
+                        <input type="password" class="input-box" placeholder="请输入密码">
+                    </div>
+                    <div class="text-area">
+                        <input type="checkbox" class="checkbox">
+                        <span class="text">自动登录</span>
+                        <span class="text a">忘记密码</span>
+                    </div>
+                    <div class="login-btn a">登 录</div>
+                    <div class="res-btn-area a">
+                        <img src="./imgs/login/bg-right.png" class="right">
+                        <div class="res-btn-text">立即注册</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 弹窗模块 -->
+    <div class="alert-window">
+        <span class="alert-text" id="alert-text"></span>
+        <button class="alert-btn a" id="alert-btn">确定</button>
+    </div>
+
+    <footer>
+        <div class="footer-about a">公司简介&nbsp;&nbsp;|&nbsp;&nbsp;Investor
+            Relations&nbsp;&nbsp;|&nbsp;&nbsp;网站联盟&nbsp;&nbsp;|&nbsp;&nbsp;乐购招商&nbsp;&nbsp;|&nbsp;&nbsp;机构销售&nbsp;&nbsp;|&nbsp;&nbsp;手机乐购&nbsp;&nbsp;|&nbsp;&nbsp;官方Blog&nbsp;&nbsp;|&nbsp;&nbsp;热词搜索
+        </div>
+        <div class="footer-brand">Copyright © 乐购网 2004-2016 All Rights Reserved</div>
+    </footer>
+    <script src="./js/header-footer.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

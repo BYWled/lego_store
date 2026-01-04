@@ -1,0 +1,119 @@
+body {
+    font-family: 'SimHei';
+}
+
+footer {
+    margin-top: 24px;
+    border: none;
+}
+
+/* 头部重定义样式 */
+header,
+.header-background {
+    height: 21px;
+}
+
+.header-background>.header-text:first-child {
+    margin-left: 265px;
+}
+
+/* 标题部分 */
+.title-background {
+    box-shadow: 0px 1px 8px 0px rgba(146, 146, 146, 0.4);
+    width: 100%;
+    height: 84px;
+}
+
+.title-area {
+    width: 1200px;
+    margin: 0 auto;
+    height: 84px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+
+/* logo拼装 */
+.logo {
+    width: 258px;
+    height: 105px;
+    background-color: #ff6600;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.logo-img {
+    width: 92px;
+    height: 64px;
+    margin: auto 0 auto 23px;
+}
+
+.logo-text {
+    font-size: 30px;
+    line-height: 29px;
+    color: #fff;
+    font-weight: bold;
+    margin: 40px 0 36px 35px;
+}
+
+.title {
+    margin-left: 282px;
+    align-self: center;
+    font-size: 30px;
+    color: #666666;
+}
+
+.nav-area {
+    margin: 0 38px 15px 0;
+}
+
+.nav-text {
+    line-height: 23px;
+    font-size: 24px;
+    color: #a6a6a6;
+    margin-left: 8px;
+}
+
+.nav-text.high-light {
+    color: #666666;
+}
+
+/* 弹窗模块 */
+.alert-window {
+    width: 400px;
+    height: 200px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: calc(50% - 100px);
+    left: calc(50% - 200px);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+    z-index: 1000;
+    border-radius: 15px;
+}
+.alert-text {
+    font-size: 20px;
+    line-height: 28px;
+    color: #4d4d4d;
+    text-align: center;
+    margin-top: 40px;
+}
+.alert-btn {
+    font-size: 18px;
+    width: 100px;
+    padding: 4px 6px;
+    line-height: 28px;
+    color: #fff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}

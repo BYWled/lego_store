@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐购商城 - 商品详情</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/top-nav.css">
+    <link rel="stylesheet" href="./css/detail.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-background">
+            <span class="header-text">legochina.cn</span>
+            <div class="header-top-right">
+                <span class="header-text">欢迎光临</span><span class="header-text high-light a" id="index">乐购</span><span
+                    class="header-text before-login">，请</span>
+                <span class="header-text a before-login" id="login">登陆</span><span class="header-text">\</span><span
+                    class="header-text high-light a before-login" id="register">注册</span>
+                <span class="header-text high-light after-login " id="header-username"></span><span class="header-text after-login">，您好!</span>
+                <span class="header-text high-light a after-login" id="logout">退出登录</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 搜索层 -->
+        <div class="search-area center">
+            <input class="search-input" type="text" placeholder="请输入商品名称" id="search" />
+            <img class="search-btn" src="./imgs/index/search.png" alt="搜索" />
+            <div class="shopping-car-area">
+                <img class="shopping-car-img" src="./imgs/index/bgicon.png" alt="购物车" />
+                <span class="shopping-car">购物车&nbsp;3</span>
+            </div>
+            <div class="order">我的订单</div>
+        </div>
+        <!-- 导航栏 -->
+        <div class="nav-area">
+            <div class="logo">
+                <div class="logo-area">
+                    <img class="logo-img" src="./imgs/logo.png" alt="乐购商城" />
+                    <div class="logo-text-area">
+                        <div class="logo-text">读好书</div>
+                        <hr class="logo-text-line" />
+                        <div class="logo-text">好读书</div>
+                    </div>
+                </div>
+                <img class="logo-nav" src="./imgs/detail/logo_nav.png" />
+            </div>
+        </div>
+        <!-- 主内容背景 -->
+        <div class="main-background">
+            <!-- 目录 -->
+            <div class="menu center">
+                <span class="first-menu a">图书</span>
+                <span class="menu-text a">>&nbsp;小说&nbsp;>&nbsp;情感/家庭/婚姻&nbsp;>&nbsp;&nbsp;博集天卷&nbsp;>&nbsp;她和他</span>
+            </div>
+            <!-- 详情内容 -->
+            <div class="info-area center">
+                <div class="info-left">
+                    <img src="./imgs/detail/gah0.jpg" class="info-img">
+                    <img src="./imgs/detail/gah.jpg" class="info-img">
+                    <div class="info-mini-imgs">
+                        <img src="./imgs/detail/left.png" class="info-lr a" id="pre">
+                        <img src="./imgs/detail/gah0.jpg" class="info-mini-img select a">
+                        <img src="./imgs/detail/gah.jpg" class="info-mini-img a">
+                        <div style="min-height: 1px;flex: 1;"></div>
+                        <img src="./imgs/detail/right.png" class="info-lr a" id="next">
+                    </div>
+                    <span class="info-id">商品编号：1145142233</span>
+                </div>
+                <div class="info-right">
+                    <span class="info-title">她和他</span>
+                    <span class="high-info">《偷影子的人》作者马克·李维重磅新作，法国连续60周在榜，销量突破120万册</span>
+                    <span class="info-author">[法]&nbsp;马克·李维&nbsp;著：杨亦雨&nbsp;译</span>
+                    <div class="info-price-area">
+                        <!-- 写完了才发现右侧的累计评价... -->
+                        <div class="info-total-area">
+                            <span class="info-total-title">累计评价</span>
+                            <span class="info-total-number">12345</span>
+                            <div class="info-total-line"></div>
+                        </div>
+                        <div class="info-prices">
+                            <span class="info-price-title">乐&nbsp;购&nbsp;价：</span><span class="info-price">￥26.20</span>
+                            <span class="info-price-title">&nbsp;[6.9折]&nbsp;[定价：￥38.00]&nbsp;(降价通知)</span>
+                        </div>
+                        <div class="info-sales">
+                            <span class="info-price-title">促销信息：</span><span
+                                class="info-sale">满减&nbsp;满199减50，满299减80&nbsp;&nbsp;</span>
+                        </div>
+                        <div class="info-tickets">
+                            <span class="info-price-title">领券：</span>
+                            <div class="info-ticket">100-6</div>
+                            <div class="info-ticket">100-6</div>
+                        </div>
+                    </div>
+                    <div class="info-type">
+                        <span class="info-type-title">种类选择：</span>
+                        <div class="info-type-item a">平装版
+                            <img src="./imgs/detail/select.png" class="info-type-item-selected">
+                        </div>
+                        <div class="info-type-item select a">精装版
+                            <img src="./imgs/detail/select.png" class="info-type-item-selected select">
+                        </div>
+                    </div>
+                    <div class="info-buy-area">
+                        <input type="text" class="info-count" value=1>
+                        <div class="info-count-btns">
+                            <span class="count-btn a">+</span>
+                            <span class="count-btn a">-</span>
+                        </div>
+                        <span class="info-buy-btn a" id="add-cart">加入购物车</span>
+                    </div>
+                    <span class="info-tip">温馨提示：支持7天无理由退货</span>
+                </div>
+            </div>
+        </div>
+        <!-- 人气部分 -->
+        <div class="like-area center">
+            <div class="like-title">人气单品</div>
+            <hr class="like-line" />
+            <div class="like-items">
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 评价部分 -->
+        <div class="after-info-area center">
+            <div class="again-area">
+                <div class="again-title">看了又看</div>
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+                <hr class="again-line" />
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+                <hr class="again-line" />
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+                <hr class="again-line" />
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+                <hr class="again-line" />
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+                <hr class="again-line" />
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+                <hr class="again-line" />
+                <div class="like-item">
+                    <img src="./imgs/shoppingCar/22935553-1_l.jpg" class="like-img">
+                    <img src="./imgs/shoppingCar/note.png" class="like-note">
+                    <span class="like-text">白夜行&nbsp;&nbsp;东野上吾</span>
+                    <div class="like-star-area">
+                        <span class="like-star-text">推荐：</span>
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                        <img src="./imgs/shoppingCar/star.png" class="like-star">
+                    </div>
+                    <div class="like-price-area">
+                        <span class="like-price">¥：38</span>
+                        <span class="like-price-old">¥：58</span>
+                    </div>
+                </div>
+            </div>
+            <div class="after-right-area">
+                <span class="after-right-title">商品介绍</span>
+                <span class="after-right-title active">评价 (9999)</span>
+                <hr class="after-right-line" />
+                <div class="evaluation-hero">
+                    <div class="evaluation-hero-num">98%</div>
+                    <div class="evaluation-hero-title">好评度</div>
+                    <div class="evaluation-hero-info">好评(98%)</div>
+                    <div class="evaluation-hero-info">中评(2%)</div>
+                    <div class="evaluation-hero-info">差评(0%)</div>
+                    <div class="evaluation-hero-bar">
+                        <div class="evaluation-hero-bar-fill" style="width: 98%;"></div>
+                    </div>
+                    <div class="evaluation-hero-bar">
+                        <div class="evaluation-hero-bar-fill" style="width: 2%;"></div>
+                    </div>
+                    <div class="evaluation-hero-bar">
+                        <div class="evaluation-hero-bar-fill"></div>
+                    </div>
+                    <div class="evaluation-hero-user">1.伴**d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+0</div>
+                    <div class="evaluation-hero-user">3.伴**d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+10</div>
+                    <div class="evaluation-hero-user">2.伴**d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+0</div>
+                    <div class="evaluation-hero-user">4.伴**d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+10</div>
+                </div>
+                <div class="evaluation-nav">
+                    <span class="evaluation-nav-item active a">全部评价 (9999)</span>
+                    <span class="evaluation-nav-item a">好评 (888)</span>
+                    <span class="evaluation-nav-item a">中评 (888)</span>
+                    <span class="evaluation-nav-item a">差评 (888)</span>
+                </div>
+                <div class="evaluation-area" style="margin-top: -5px;">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="evaluation-area">
+                    <div class="evaluation-stars">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/redstar.png" class="evaluation-star">
+                        <img src="./imgs/detail/star.png" class="evaluation-star">
+                    </div>
+                    <div class="evaluation-day">下单后5天评论</div>
+                    <div class="evaluation-date">2016-08-11</div>
+                    <div class="evaluation-mid">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关键是价格真给力</div>
+                    <div class="user">
+                        <img src="./imgs/detail/user.jpg" class="user-logo">
+                        <div class="user-name">伴**d</div>
+                    </div>
+                    <div class="user-vip">金牌会员</div>
+                    <div class="user-device">来自iPhone客户端</div>
+                </div>
+                <div class="page-btns">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">4</button>
+                    <button class="page-btn">5</button>
+                    <button class="page-btn">6</button>
+                    ......
+                    <button class="next-page">下一页</button>
+                </div>
+            </div>
+        </div>
+        <!-- 广告部分 -->
+        <img src="./imgs/ad.png" class="ad center">
+    </main>
+
+    <footer>
+        <div class="footer-hero-background">
+            <div class="footer-hero">
+                <img class="footer-hero-img" src="./imgs/footer/222_11.png" />
+                <img class="footer-hero-img" src="./imgs/footer/222_13.png" />
+                <img class="footer-hero-img" src="./imgs/footer/222_15.png" />
+                <img class="footer-hero-img" src="./imgs/footer/222_17.png" />
+            </div>
+        </div>
+        <!-- <div class="footer-content-background"> -->
+        <div class="footer-content-area">
+            <div class="footer-contents">
+                <span class="footer-content-title">购物指南</span>
+                <span class="footer-content a">购物流程</span>
+                <span class="footer-content a">发票制度</span>
+                <span class="footer-content a">账户管理</span>
+                <span class="footer-content a">会员优惠</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">支付方式</span>
+                <span class="footer-content a">货到付款</span>
+                <span class="footer-content a">网上支付</span>
+                <span class="footer-content a">礼品卡支付</span>
+                <span class="footer-content a">银行转账</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">订单服务</span>
+                <span class="footer-content a">订单配送查询</span>
+                <span class="footer-content a">订单状态说明</span>
+                <span class="footer-content a">自助取消订单</span>
+                <span class="footer-content a">自助修改订单</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">退换货</span>
+                <span class="footer-content a">退换货政策</span>
+                <span class="footer-content a">自助申请退换货</span>
+                <span class="footer-content a">退换货进度查询</span>
+                <span class="footer-content a">退款方式和时间</span>
+            </div>
+            <div class="footer-contents">
+                <span class="footer-content-title">商家服务</span>
+                <span class="footer-content a">商家中心</span>
+                <span class="footer-content a">运营服务</span>
+                <span class="footer-content a">进入尾品汇</span>
+                <span class="footer-content a">坤你太美</span>
+            </div>
+            <img class="footer-icon a" id="index" src="./imgs/footer/logo_00.png" />
+        </div>
+        <div class="footer-about a">公司简介&nbsp;&nbsp;|&nbsp;&nbsp;Investor
+            Relations&nbsp;&nbsp;|&nbsp;&nbsp;网站联盟&nbsp;&nbsp;|&nbsp;&nbsp;乐购招商&nbsp;&nbsp;|&nbsp;&nbsp;机构销售&nbsp;&nbsp;|&nbsp;&nbsp;手机乐购&nbsp;&nbsp;|&nbsp;&nbsp;官方Blog&nbsp;&nbsp;|&nbsp;&nbsp;热词搜索
+        </div>
+        <div class="footer-brand">Copyright © 乐购网 2004-2016 All Rights Reserved</div>
+        <!-- </div> -->
+    </footer>
+
+    <script type="application/json" src="./data/detail.json"></script>
+    <script src="./js/detail.js"></script>
+    <script src="./js/header-footer.js"></script>
+</body>
+
+</html>
